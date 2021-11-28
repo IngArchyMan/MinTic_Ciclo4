@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingStart="40dp"
+    android:paddingEnd="40dp"
+    android:background="@drawable/login_circular_gradient">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="100dp"
+        android:layout_margin="5dp"
+        android:elevation="10dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/user_img"
+            android:src="@drawable/userpick"
+            android:scaleType="centerCrop"
+            android:contentDescription="user pick" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <EditText
+        android:id="@+id/editUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Ingresa tu usuario"
+        android:gravity="start"
+        android:layout_marginTop="20dp"
+        android:inputType="textAutoComplete"
+        android:textColor="@color/white"
+        android:textColorHint="#cdffff"
+        android:backgroundTint="#cdffff"/>
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Ingresa tu contraseña"
+        android:gravity="start"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:inputType="textAutoComplete"
+        android:textColor="@color/white"
+        android:textColorHint="#cdffff"
+        android:backgroundTint="#cdffff"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="5dp"
+        android:elevation="4dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/btnIngresar"
+        app:cardBackgroundColor="#cdffff">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Ingresar"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#66cb9b"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:weightSum="90"
+        android:orientation="horizontal"
+        android:layout_marginTop="100dp">
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="30"
+            android:background="@android:color/transparent"
+            android:src="@drawable/facebook_icon_login"
+            android:scaleType="fitCenter"
+            android:id="@+id/btnFacebook"/>
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="30"
+            android:background="@android:color/transparent"
+            android:src="@drawable/gorjeo_icon_login"
+            android:scaleType="fitCenter"
+            android:id="@+id/btnTwitter"
+            android:padding="3dp"/>
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="30"
+            android:background="@android:color/transparent"
+            android:src="@drawable/google_icon_login"
+            android:scaleType="fitCenter"
+            android:id="@+id/btnGmail"
+            android:padding="5dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtRegistrarse"
+        android:text="Registrate"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:textSize="18sp"/>
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/progress_circular_loading"
+        style="?android:attr/progressBarStyleLarge"
+        android:theme="@style/ContentLoadingProgress"
+        android:progress="@android:integer/config_longAnimTime"
+        android:visibility="invisible"/>
+
+
+
+</LinearLayout>
